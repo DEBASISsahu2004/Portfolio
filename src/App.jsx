@@ -1,7 +1,8 @@
 import './App.css'
+import { Element } from 'react-scroll'
 import Home from './pages/home/Home'
 import About from './pages/about/About'
-import { Element } from 'react-scroll'
+import Service from './pages/service/Service'
 
 function App() {
 
@@ -12,6 +13,9 @@ function App() {
       </Element>
       <Element name='about'>
         <About />
+      </Element>
+      <Element name='service'>
+        <Service />
       </Element>
     </>
   )

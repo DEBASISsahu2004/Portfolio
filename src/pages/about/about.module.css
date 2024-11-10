@@ -7,9 +7,9 @@
   justify-content: center;
   align-items: center;
   gap: 4em;
-  overflow: hidden;
+  height: fit-content;
   font-family: "Poppins", sans-serif;
-  padding: 14em 0;
+  padding: 14em 0 2em 0;
   width: 100%;
 }
 

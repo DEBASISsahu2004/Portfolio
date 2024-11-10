@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.serviceContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  height: fit-content;
+  font-family: "Poppins", sans-serif;
+  padding: 14em 0 2em 0;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.serviceContainer .heading {
+  font-size: clamp(6em, 2vw, 8em);
+  font-weight: 700;
+  color: #e1ffda;
+  position: relative;
+  padding: 0 0.2em;
+}
+
+.serviceContainer .heading:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #3e3e3e 0%, black 50%, #3e3e3e 100%);
+  border-radius: 12px;
+}
+
+.serviceContainer .subHeading {
+  font-size: clamp(4em, 1.5vw, 8em);
+  font-weight: 500;
+  color: #0d92d4;
+  font-family: "Clash Display", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.serviceSection {
+  display: flex;
+  gap: 6em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8em;
+}
+
+.serviceSection .serviceCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  padding: 2em 4em;
+  width: 400px;
+  width: clamp(300px, 26vw, 400px);
+  margin-bottom: 2em;
+}
+
+.serviceCard h3 {
+  font-size: clamp(3em, 1vw, 5em);
+}
+
+.serviceCard h4 {
+  font-size: clamp(3em, 1vw, 4.5em);
+  font-family: "Clash Display", sans-serif;
+  letter-spacing: 1px;
+}
+
+.serviceCard img {
+  width: 80%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.serviceCard p{
+  font-size: clamp(3em, 0.9vw, 4em);
+}
+
+.serviceCard:nth-child(1) h4 {
+  color: #d4500d;
+}
+
+.serviceCard:nth-child(2) h4 {
+  color: #e1ffda;
+}
+
+.serviceCard:nth-child(3) h4 {
+  color: #0d92d4;
+}
+
+.serviceCard:nth-child(1) {
+  border-left: 2px solid #d4500d;
+}
+
+.serviceCard:nth-child(2) {
+  border-left: 2px solid #e1ffda;
+}
+
+.serviceCard:nth-child(3) {
+  border-left: 2px solid #0d92d4;
+}
+
+@media screen and (max-width: 850px){
+  .serviceSection {
+    gap: 3em;
+    margin-top: 4em ;
+  }
+}
