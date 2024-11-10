@@ -1,3 +1,142 @@
-.aboutContainer h1{
-    color: aliceblue;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  padding: 14em 0;
+  width: 100%;
+}
+
+.aboutContainer h1 {
+  font-size: clamp(6em, 2vw, 8em);
+  font-weight: 700;
+  color: #d4500d;
+  position: relative;
+  padding: 0 0.2em;
+}
+
+.aboutContainer h1:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #3e3e3e 0%, black 50%, #3e3e3e 100%);
+  border-radius: 12px;
+}
+
+.aboutContainer h2 {
+  font-size: clamp(4em, 1.5vw, 8em);
+  font-weight: 500;
+  color: #e1ffda;
+  font-family: "Clash Display", sans-serif;
+  letter-spacing: 1px;
+}
+
+.aboutContainer .aboutNavbar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: clamp(2em, 4vw, 18em);
+}
+
+.aboutContainer .aboutNavbar p {
+  width: fit-content;
+  cursor: pointer;
+  color: #666;
+  font-size: clamp(2.5em, 1.2vw, 8em);
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutContainer .aboutNavbar p.activeQuestion{
+  border-bottom: 3px solid #d4500d;
+  color: #e1ffda;
+}
+
+.aboutContainer .displayContent {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 10em;
+}
+
+.aboutContainer .displayContent .imageContainer {
+  width: 32vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.aboutContainer .displayContent .imageContainer img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutContainer .displayContent .imageContainer img:hover {
+  filter: grayscale(0%);
+}
+
+.aboutContainer .displayContent .infoContainer {
+  width: 32vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #d4500d;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  padding: 0 20em;
+  left: -10%;
+}
+
+.aboutContainer .displayContent .infoContainer p {
+  font-size: clamp(3em, 1vw, 5em);
+  color: #e1ffda;
+  font-weight: 500;
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px){
+    .aboutContainer .displayContent .infoContainer {
+        padding: 0 8em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutContainer .displayContent {
+    flex-direction: column;
+    margin-top: 2em;
+  }
+  .aboutContainer .displayContent .imageContainer {
+    width: 70em;
+  }
+
+  .aboutContainer .displayContent .infoContainer {
+    justify-content: center;
+    width: 70em;
+    padding: 0 10em;
+    left: 0;
+    margin-top: -20%;
+  }
+
+  .aboutContainer .displayContent .infoContainer p {
+    width: 100%;
+  }
 }
