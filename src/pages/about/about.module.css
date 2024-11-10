@@ -35,7 +35,7 @@
 .aboutContainer h2 {
   font-size: clamp(4em, 1.5vw, 8em);
   font-weight: 500;
-  color: #e1ffda;
+  color: #E1FFDA;
   font-family: "Clash Display", sans-serif;
   letter-spacing: 1px;
 }
@@ -57,7 +57,7 @@
 
 .aboutContainer .aboutNavbar p.activeQuestion{
   border-bottom: 3px solid #d4500d;
-  color: #e1ffda;
+  color: #E1FFDA;
 }
 
 .aboutContainer .displayContent {
@@ -106,7 +106,7 @@
 
 .aboutContainer .displayContent .infoContainer p {
   font-size: clamp(3em, 1vw, 5em);
-  color: #e1ffda;
+  color: #E1FFDA;
   font-weight: 500;
   width: 80%;
   font-family: "Poppins", sans-serif;
