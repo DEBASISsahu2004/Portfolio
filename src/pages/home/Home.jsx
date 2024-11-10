@@ -13,8 +13,8 @@ const Home = () => {
             </div>
 
             <div className={styles.textSection}>
-                <h1>Designing Digital Realities</h1>
-                <p>With a focus on bold visuals and seamless usability, I design web interfaces that captivate and communicate. Explore my portfolio to see my approach to modern, impactful design.</p>
+                <h1>Webcrafting Digital Realities</h1>
+                <p>With a focus on bold visuals and seamless usability, I design and develop web interfaces that captivate and communicate. Explore my portfolio to see my approach to craft.</p>
                 <Link
                     className={styles.linkToExperience}
                     to="about"
