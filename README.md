@@ -8,7 +8,7 @@ Welcome to my service page repository! Or, as I like to call it, "the hub of all
    Discover a bit about my journey, my skills, and probably more about my coffee addiction than you asked for.
 
 - **Experience** 💻  
-   I’ve done some things, in some places, with some people (all professionally, of course). Check out the highlights of my career so far.
+   I’ve done some things, in some places, with some people. Check out the highlights of my career so far.
 
 - **Services** 🎩  
    Here’s where I tell you what I do best – web development, design, consulting, and probably a bit of tech therapy if you need it. Whether you need a sleek website or just someone to listen to your code complaints, I’m here.

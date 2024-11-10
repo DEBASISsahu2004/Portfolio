@@ -1,0 +1,36 @@
+:root{
+  --primary-color: #0D92D4;
+  --secondary-color: #D4500D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 4px;
+  user-select: none;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: black;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("./assets/fonts/ClashDisplay/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Bold.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Pretty Dahlia";
+  src: url("./assets/fonts/pretty-dahlia/pretty-dahlia/Pretty-Dahlia.otf")
+    format("opentype");
+}
