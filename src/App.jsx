@@ -4,6 +4,7 @@ import Home from './pages/home/Home'
 import About from './pages/about/About'
 import Service from './pages/service/Service'
 import Experience from './pages/experience/Experience'
+import Contact from './pages/contact/Contact'
 import Footer from './pages/footer/Footer'
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
       </Element>
       <Element name='experiece'>
         <Experience />
+      </Element>
+      <Element name='contact'>
+        <Contact />
       </Element>
       <Element name='footer'>
         <Footer />

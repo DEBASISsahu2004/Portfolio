@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.inputContainer label {
+  font-size: clamp(4em, 1vw, 5em);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.inputContainer input,
+.inputContainer textarea {
+  font-size: clamp(4em, 1vw, 5em);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding: 0.5em;
+  border: 2px solid #666;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+  color: #fff;
+  transition: border 0.3s ease-in-out;
+}
+
+.inputContainer textarea {
+  resize: none;
+  max-height: 10em;
+}
+
+.inputContainer input:focus,
+.inputContainer textarea:focus {
+  border: 2px solid #fff;
+}
