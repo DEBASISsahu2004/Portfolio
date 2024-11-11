@@ -6,6 +6,8 @@ import Service from './pages/service/Service'
 import Experience from './pages/experience/Experience'
 import Contact from './pages/contact/Contact'
 import Footer from './pages/footer/Footer'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -29,6 +31,8 @@ function App() {
       <Element name='footer'>
         <Footer />
       </Element>
+      
+      <ToastContainer />
     </>
   )
 }

@@ -7,6 +7,7 @@
   justify-content: center;
   height: fit-content;
   overflow: hidden;
+  font-size: 4px;
   gap: 4em;
 }
 

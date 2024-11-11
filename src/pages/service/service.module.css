@@ -6,6 +6,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
+  font-size: 4px;
   gap: 4em;
   height: fit-content;
   font-family: "Poppins", sans-serif;

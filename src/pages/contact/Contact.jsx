@@ -2,6 +2,8 @@ import styles from './contact.module.css'
 import { useState } from 'react'
 import Input from '../../components/input/Input'
 import Sideimage from '../../assets/images/contactImg.jpg'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [formDetails, setFormDetails] = useState({
@@ -12,6 +14,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (formDetails.name === '' || formDetails.email === '' || formDetails.message === '') {
+      toast.info('All fields are required');
+      return;
+    }
+
     console.log(formDetails);
     console.log('Form Submitted')
     setFormDetails({
