@@ -1,0 +1,101 @@
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 14em 15em;
+  border-top: 2px solid white;
+  flex-wrap: wrap;
+}
+
+.footerContainer .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 14em;
+  flex-wrap: wrap;
+}
+
+.footerContainer .navLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2em;
+  flex-direction: column;
+}
+
+.footerContainer .navLinks h3,
+.footerContainer .socialHandles h3 {
+  font-size: clamp(4em, 1.2vw, 6em);
+  font-family: "Clash Display", sans-serif;
+  letter-spacing: 1px;
+}
+
+.footerContainer .navLinks .sectionLink {
+  cursor: pointer;
+  font-size: clamp(3em, 1vw, 4.5em);
+  font-family: "poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.footerContainer .navLinks .sectionLink:hover {
+  color: #0d92d4;
+}
+
+.footerContainer .socialHandles {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2em;
+  flex-direction: column;
+}
+
+.footerContainer .socialHandles div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
+}
+
+.footerContainer .socialHandles img {
+  width: 7em;
+}
+
+.footerContainer .textSection {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  gap: 10em;
+  flex-direction: column;
+}
+
+.footerContainer .textSection h1 {
+  font-size: clamp(5em, 1.5vw, 8em);
+  font-family: "Clash Display", sans-serif;
+  letter-spacing: 1px;
+}
+
+.footerContainer .textSection h2 {
+  font-size: clamp(12em, 5vw, 20em);
+  font-family: "Pretty Dahlia", sans-serif;
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .footerContainer {
+    gap: 4em;
+  }
+
+  .footerContainer .links {
+    width: 100%;
+    gap: 8em;
+  }
+
+  .footerContainer .textSection {
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footerContainer .links {
+    gap: 6em;
+  }
+}
