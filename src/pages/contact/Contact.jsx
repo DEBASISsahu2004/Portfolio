@@ -15,12 +15,11 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formDetails.name === '' || formDetails.email === '' || formDetails.message === '') {
-      toast.info('All fields are required');
+      toast.error('All fields are required');
       return;
     }
 
-    console.log(formDetails);
-    console.log('Form Submitted')
+    toast.success('Form Submitted Successfully');
     setFormDetails({
       name: '',
       email: '',
