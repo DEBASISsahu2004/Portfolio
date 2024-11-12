@@ -1,0 +1,20 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="black" />
+
+  <!-- Letter "D" shape -->
+  <path
+    d="M50,30 Q90,30 110,70 Q130,110 90,150 Q50,190 50,30"
+    fill="none"
+    stroke="white"
+    stroke-width="18"
+  />
+
+  <!-- Swoosh element within "D" -->
+  <path
+    d="M80,60 C100,90 100,120 80,140"
+    fill="none"
+    stroke="white"
+    stroke-width="10"
+  />
+</svg>

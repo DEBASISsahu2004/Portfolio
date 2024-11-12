@@ -41,7 +41,7 @@ export function Marque({reviews}) {
         <div>
             <Marquee pauseOnHover className="[--duration:30s]">
                 {reviews.map((review) => (
-                    <ReviewCard key={review.username} {...review} />
+                    <ReviewCard key={review.email} {...review} />
                 ))}
             </Marquee>
         </div>
@@ -54,6 +54,5 @@ Marque.propTypes = {
         name: PropTypes.string.isRequired,
         email: PropTypes.string.isRequired,
         body: PropTypes.string.isRequired,
-        username: PropTypes.string.isRequired,
     })).isRequired,
 };

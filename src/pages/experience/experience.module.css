@@ -9,7 +9,7 @@
   gap: 4em;
   height: fit-content;
   font-family: "Poppins", sans-serif;
-  padding: 14em 0 2em 0;
+  padding: 14em 0em 2em 0em;
   font-size: 4px;
   width: 100%;
 }
@@ -22,15 +22,6 @@
   padding: 0 0.2em;
 }
 
-.experienceContainer .subHeading {
-  font-size: clamp(4em, 1.5vw, 8em);
-  font-weight: 500;
-  color: #D4500D;
-  font-family: "Clash Display", sans-serif;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
 .experienceContainer .heading:before {
   content: "";
   position: absolute;
@@ -40,4 +31,82 @@
   bottom: 0;
   background: linear-gradient(90deg, #3e3e3e 0%, black 50%, #3e3e3e 100%);
   border-radius: 12px;
+}
+
+.experienceContainer .subHeading {
+  font-size: clamp(4em, 1.5vw, 8em);
+  font-weight: 500;
+  color: #D4500D;
+  font-family: "Clash Display", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.experienceContainer .carouselSection{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+  height: fit-content;
+  padding: 2em 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.experienceContainer .imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%; 
+  height: fit-content;
+  padding: 2em 0;
+  gap: 8em;
+  overflow: hidden;
+}
+
+.experienceContainer .imageContainer img:nth-child(odd) {
+  border-radius: 10px;
+  width: clamp(300px, 20vw, 500px);
+  cursor: pointer;
+}
+
+.experienceContainer .imageContainer img:nth-child(even) {
+  width: clamp(400px, 40vw, 700px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.44);
+}
+
+.experienceContainer .buttonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14em;
+  width: 100%;
+  height: fit-content;
+  padding: 2em 0;
+}
+
+.experienceContainer .buttonContainer img{
+  width: 30px;
+  padding: 1em;
+  background-color: #666;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.experienceContainer .buttonContainer img:hover{
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.experienceContainer .buttonContainer h4{
+  font-size: clamp(3.5em, 1.5vw, 5em);
+}
+
+.experienceContainer .description{
+  text-align: center;
+  width: 50%;
+  font-size: clamp(4em, 1vw, 6em);
 }
