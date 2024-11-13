@@ -1,6 +1,6 @@
 import styles from './testimonials.module.css'
 import { Marque } from '@/components/marquee/Marque'
-import Clientavatar from '../../assets/images/clientavatar.svg'
+import Clientavatar from '../../assets/images/clientAvatar.svg'
 
 const Testimonials = () => {
   const reviews = [
