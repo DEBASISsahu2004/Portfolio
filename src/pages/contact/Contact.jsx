@@ -12,19 +12,43 @@ const Contact = () => {
     message: ''
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formDetails.name === '' || formDetails.email === '' || formDetails.message === '') {
       toast.error('All fields are required');
       return;
     }
 
-    toast.success('Form Submitted Successfully');
-    setFormDetails({
-      name: '',
-      email: '',
-      message: ''
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwP4pGV_hs2hJsQ7gxwM8p-6zygOIZ-Dki6La8wGKCsW51v5vX7D-ZCAi95goDczhj2/exec';
+
+    const formData = new FormData(e.target);
+
+    await fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify({
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message')
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      mode: 'no-cors'
     })
+      .then(() => {
+        // Since 'no-cors' mode is used, we cannot access the response directly
+        console.log('Form submitted successfully');
+        toast.success('Form Submitted Successfully');
+        setFormDetails({
+          name: '',
+          email: '',
+          message: ''
+        });
+      })
+      .catch(error => {
+        console.error('Error!', error.message);
+        toast.error('Form submission failed');
+      });
   }
 
   const handleChange = (e) => {
