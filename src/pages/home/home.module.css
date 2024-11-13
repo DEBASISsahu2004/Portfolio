@@ -19,6 +19,7 @@
   font-family: "Clash Display", sans-serif;
   font-size: clamp(10em, 22vw, 180em);
   line-height: 0.7;
+  font-weight: 900;
 }
 
 .homeContainer .nameSection p {
