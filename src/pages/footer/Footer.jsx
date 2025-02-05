@@ -11,7 +11,7 @@ const Footer = () => {
             <div className={styles.links}>
                 <div className={styles.navLinks}>
                     <h3 className={styles.title}>Quick Links</h3>
-                    {['About', 'Experience'].map((text, index) => (
+                    {['Home', 'About', 'Experience'].map((text, index) => (
                         <Link className={styles.sectionLink} key={index} to={text.toLowerCase()} smooth duration={500}>{text}</Link>
                     ))}
                 </div>
