@@ -21,7 +21,7 @@ const Home = () => {
                 </p>
                 <Link
                     className={styles.linkToExperience}
-                    to="experiece"
+                    to="experience"
                     smooth={true}
                     duration={500}
                 >Explore My Work <img src={Arrow} alt="arrow" /></Link>
