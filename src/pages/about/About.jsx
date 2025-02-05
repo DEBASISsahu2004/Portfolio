@@ -11,7 +11,7 @@ const About = () => {
     },
     {
       question: "What I Provide?",
-      answer: "I offer web development, UI/UX design, and consulting services. My goal is to deliver clean, responsive, and intuitive solutions tailored to meet each client's needs."
+      answer: "I specialize in web development and UI/UX design for websites and apps, creating clean, responsive, and user-friendly solutions tailored to each client's needs."
     },
     {
       question: "How I do it?",

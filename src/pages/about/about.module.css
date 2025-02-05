@@ -9,10 +9,10 @@
   overflow-x: hidden;
   gap: 10px;
   font-family: "Poppins", sans-serif;
-  margin: 60px 0;
+  margin: 100px 0;
 }
 
-.aboutContainer h1 {
+.aboutContainer .heading {
   font-size: 22px;
   font-weight: 700;
   color: #d4500d;
@@ -20,7 +20,7 @@
   line-height: 0.9;
 }
 
-.aboutContainer h2 {
+.aboutContainer .subHeading {
   font-size: 24px;
   font-weight: 500;
   color: #e1ffda;
@@ -102,15 +102,15 @@
 @media screen and (max-width: 1024px) {
   .aboutContainer {
     gap: 8px;
-    margin: 50px 0;
+    margin: 80px 0;
   }
 
   .aboutContainer h1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .aboutContainer h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .aboutContainer .aboutNavbar {
@@ -144,15 +144,15 @@
 @media screen and (max-width: 769px) {
   .aboutContainer {
     gap: 8px;
-    margin: 50px 0;
+    margin: 60px 0;
   }
 
   .aboutContainer h1 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .aboutContainer h2 {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .aboutContainer .aboutNavbar {
@@ -188,11 +188,11 @@
 
 @media screen and (max-width: 426px) {
   .aboutContainer h1 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .aboutContainer h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .aboutContainer .aboutNavbar {

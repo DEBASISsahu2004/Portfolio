@@ -1,27 +1,33 @@
 import styles from './experience.module.css'
 import { useState } from 'react';
-import CaroCollide from '../../assets/images/caro_collide.png'
-import CaroRecipe from '../../assets/images/caro_recipe.png'
-import CaroNote from '../../assets/images/caro_note.png'
-import Left from '../../assets/images/left.svg'
-import Right from '../../assets/images/right.svg'
+import Notenest from '../../assets/images/notenest.jpg';
+import Cookease from '../../assets/images/cookease.jpg';
+import Nomonday from '../../assets/images/nomonday.png';
+import Left from '../../assets/icons/leftarrow.svg'
+import Right from '../../assets/icons/rightarrow.svg'
 
 const Experience = () => {
     const experience = [
         {
-            title: 'Collide',
-            image: CaroCollide,
-            description: 'An immersive platform connecting users with shared interests, enabling collaboration and networking through engaging features.'
+            title: 'NoteNest',
+            image: Notenest,
+            description: 'A secure note-taking app that lets users organize and manage personal notes, accessible anytime and anywhere.',
+            designLink: 'https://drive.google.com/drive/folders/1k_sOqU0qC8ZWRQ38pD9EawRfAbq31_Dp?usp=drive_link',
+            websiteLink: 'https://note-nest-beryl.vercel.app/',
         },
         {
             title: 'CookEase',
-            image: CaroRecipe,
-            description: 'A smart recipe finder that helps users create meals with ingredients they have on hand, offering an effortless cooking experience.'
+            image: Cookease,
+            description: 'A smart recipe finder that helps users create meals with ingredients they have on hand, offering an effortless cooking experience.',
+            designLink: 'https://drive.google.com/drive/folders/1nOp70XAstduFSa76lP1kt5XKX2gHteYK?usp=drive_link',
+            websiteLink: '',
         },
         {
-            title: 'NoteNest',
-            image: CaroNote,
-            description: 'A secure note-taking app that lets users organize and manage personal notes, accessible anytime and anywhere.'
+            title: 'NoMonday Studios',
+            image: Nomonday,
+            description: 'A visually striking and fully responsive website built for NoMonday Studios, designed to showcase their expertise in brand design, rebranding, and influencer relations.',
+            designLink: 'https://drive.google.com/drive/folders/1DmykBAJVhu3Slt0ZQhSY_InDv5LwFqFv?usp=drive_link',
+            websiteLink: 'https://www.nomondaystudios.com/',
         }
     ]
 
@@ -41,20 +47,33 @@ const Experience = () => {
 
     return (
         <div className={styles.experienceContainer}>
-            <h1 className={styles.heading}>Experience</h1>
-            <h2 className={styles.subHeading}>Designing user-centered solutions with a modern edge and bold aesthetics</h2>
+            <h1 className={styles.heading}>Projects</h1>
+            <h2 className={styles.subHeading}>Crafting user-centric solutions with modern design and functionality.</h2>
+
             <div className={styles.carouselSection}>
                 <div className={styles.imageContainer}>
                     <img onClick={prevSlide} src={experience[getImageIndex(currentIndex - 1)].image} alt={experience[getImageIndex(currentIndex - 1)].title} />
+
                     <img src={experience[currentIndex].image} alt={experience[currentIndex].title} />
+
                     <img onClick={nextSlide} src={experience[getImageIndex(currentIndex + 1)].image} alt={experience[getImageIndex(currentIndex + 1)].title} />
                 </div>
+
                 <div className={styles.buttonContainer}>
                     <img onClick={prevSlide} className={styles.prevButton} src={Left} alt="left" />
+
                     <h4>{experience[currentIndex].title}</h4>
+
                     <img onClick={nextSlide} className={styles.nextButton} src={Right} alt="right" />
                 </div>
-                <p className={styles.description}>{experience[currentIndex].description}</p>
+
+                <div className={styles.projectDetails}>
+                    <p className={styles.description}>{experience[currentIndex].description}</p>
+                    <div className={styles.linkContainer}>
+                        {experience[currentIndex].designLink && <a target='_blank' href={experience[currentIndex].designLink}>Design</a>}
+                        {experience[currentIndex].websiteLink && <a target='_blank' href={experience[currentIndex].websiteLink}>Website</a>}
+                    </div>
+                </div>
             </div>
         </div>
     )
