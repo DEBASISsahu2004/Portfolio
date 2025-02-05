@@ -85,8 +85,6 @@
 .homeContainer .textSection .linkToExperience {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   width: fit-content;
   margin: 24px auto;
@@ -107,7 +105,10 @@
   position: absolute;
   border-radius: 8px;
   content: "";
-  width: 102%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 103%;
   height: 110%;
   background-image: conic-gradient(
     from var(--angle),
@@ -195,8 +196,14 @@
   .homeContainer .textSection .linkToExperience {
     gap: 10px;
     margin: 24px auto;
-    padding: 8px 16px;
+    padding: 8px 18px;
     font-size: 14px;
+    border-radius: 4px;
+  }
+
+  .homeContainer .textSection .linkToExperience::after {
+    border-radius: 5px;
+    height: 112%;
   }
 
   .homeContainer .textSection .linkToExperience img {
@@ -245,8 +252,12 @@
   .homeContainer .textSection .linkToExperience {
     gap: 8px;
     margin: 12px auto;
-    padding: 6px 12px;
+    padding: 6px 16px;
     font-size: 12px;
+  }
+
+  .homeContainer .textSection .linkToExperience::after {
+    height: 107%;
   }
 
   .homeContainer .textSection .linkToExperience img {
@@ -275,13 +286,18 @@
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 376px) {
   .homeContainer .textSection p {
     width: 90%;
   }
 
   .homeContainer .textSection .linkToExperience {
-    padding: 6px 10px;
+    padding: 6px 12px;
+  }
+
+  .homeContainer .textSection .linkToExperience::after {
+    height: 112%;
+    width: 102%;
   }
 
   .homeContainer .serviceSection .text,
