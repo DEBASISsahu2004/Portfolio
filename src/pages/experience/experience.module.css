@@ -232,13 +232,3 @@
   }
 
 }
-
-@media screen and (max-width: 376px) {
-  .experienceContainer .heading {
-    font-size: 14px;
-  }
-
-  .experienceContainer .subHeading {
-    font-size: 16px;
-  }
-}
