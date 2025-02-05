@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -16,6 +17,14 @@ body {
   position: relative;
   background-color: black;
   color: white;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {
