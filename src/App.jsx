@@ -19,7 +19,7 @@ function App() {
       <Element name='about'>
         <About />
       </Element>
-      <Element name='experiece'>
+      <Element name='experience'>
         <Experience />
       </Element>
       {/* <Element name='testimonials'>
