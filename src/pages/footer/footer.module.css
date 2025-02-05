@@ -1,18 +1,20 @@
 .footerContainer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: start;
-  font-size: 4px;
-  padding: 14em 15em;
+  overflow-x: hidden;
+  padding: 40px 100px;
   border-top: 2px solid white;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .footerContainer .links {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 14em;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
@@ -20,20 +22,21 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 2em;
+  gap: 10px;
   flex-direction: column;
 }
 
 .footerContainer .navLinks h3,
-.footerContainer .socialHandles h3 {
-  font-size: clamp(4em, 1.2vw, 6em);
+.footerContainer .socialHandles h3,
+.footerContainer .textSection h1 {
+  font-size: 20px;
   font-family: "Clash Display", sans-serif;
   letter-spacing: 1px;
 }
 
 .footerContainer .navLinks .sectionLink {
   cursor: pointer;
-  font-size: clamp(3em, 1vw, 4.5em);
+  font-size: 16px;
   font-family: "poppins", sans-serif;
   transition: all 0.3s ease-in-out;
 }
@@ -46,57 +49,75 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 2em;
+  gap: 10px;
   flex-direction: column;
 }
 
 .footerContainer .socialHandles div {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3em;
+  gap: 12px;
 }
 
 .footerContainer .socialHandles img {
-  width: 7em;
+  width: 30px;
 }
 
 .footerContainer .textSection {
   display: flex;
   justify-content: start;
   align-items: end;
-  gap: 10em;
+  gap: 20px;
   flex-direction: column;
 }
 
-.footerContainer .textSection h1 {
-  font-size: clamp(5em, 1.5vw, 8em);
-  font-family: "Clash Display", sans-serif;
-  letter-spacing: 1px;
-}
-
 .footerContainer .textSection h2 {
-  font-size: clamp(12em, 5vw, 20em);
+  font-size: 70px;
   font-family: "Pretty Dahlia", sans-serif;
   color: var(--secondary-color);
 }
 
 @media screen and (max-width: 768px) {
   .footerContainer {
-    gap: 4em;
-  }
-
+    padding: 20px 60px;
+  }  
+  
   .footerContainer .links {
-    width: 100%;
-    gap: 8em;
+    gap: 40px;
+  }
+  
+  .footerContainer .navLinks {
+    gap: 8px;
+  }
+  
+  .footerContainer .navLinks h3,
+  .footerContainer .socialHandles h3,
+  .footerContainer .textSection h1 {
+    font-size: 16px;
+  }
+  
+  .footerContainer .navLinks .sectionLink {
+    font-size: 14px;
   }
 
+  .footerContainer .socialHandles {
+    gap: 8px;
+  }
+  
+  .footerContainer .socialHandles div {
+    gap: 8px;
+  }
+  
+  .footerContainer .socialHandles img {
+    width: 24px;
+  }
+  
   .footerContainer .textSection {
+    gap: 8px;
     align-items: start;
   }
-}
-
-@media screen and (max-width: 375px) {
-  .footerContainer .links {
-    gap: 6em;
+  
+  .footerContainer .textSection h2 {
+    font-size: 50px;
   }
 }

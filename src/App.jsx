@@ -1,13 +1,13 @@
 import './App.css'
 import { Element } from 'react-scroll'
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/home/Home'
 import About from './pages/about/About'
 import Experience from './pages/experience/Experience'
 // import Testimonials from './pages/testimonials/Testimonials';
 // import Contact from './pages/contact/Contact'
-// import Footer from './pages/footer/Footer'
+import Footer from './pages/footer/Footer'
 
 function App() {
 
@@ -28,11 +28,11 @@ function App() {
       {/* <Element name='contact'>
         <Contact />
       </Element> */}
-      {/* <Element name='footer'>
+      <Element name='footer'>
         <Footer />
-      </Element> */}
+      </Element>
       
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </>
   )
 }
