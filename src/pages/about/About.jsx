@@ -1,6 +1,6 @@
 import styles from './about.module.css'
 import { useState } from 'react'
-import Mypic from '../../assets/images/mypic.jpg'
+import Mypic from '../../assets/images/profilepic.jpg'
 
 const About = () => {
 
@@ -29,6 +29,7 @@ const About = () => {
     <div className={styles.aboutContainer}>
       <h1 className={styles.heading}>About Me</h1>
       <h2 className={styles.subHeading}>Wanna Know Me?</h2>
+      
       <div className={styles.aboutNavbar}>
         {faqs.map((faq, index) => (
           <p className={`${styles.question} ${activeIndex === index ? styles.activeQuestion : ""}`} key={index} onClick={() => setActiveIndex(index)}>

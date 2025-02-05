@@ -283,6 +283,10 @@
   .homeContainer .contactSection {
     gap: 12px;
   }
+
+  .homeContainer .contactSection{
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 376px) {

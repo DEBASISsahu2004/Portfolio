@@ -3,7 +3,7 @@ import { Element } from 'react-scroll'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from './pages/home/Home'
-// import About from './pages/about/About'
+import About from './pages/about/About'
 // import Service from './pages/service/Service'
 // import Experience from './pages/experience/Experience'
 // import Testimonials from './pages/testimonials/Testimonials';
@@ -17,9 +17,9 @@ function App() {
       <Element name='home'>
         <Home />
       </Element>
-      {/* <Element name='about'>
+      <Element name='about'>
         <About />
-      </Element> */}
+      </Element>
       {/* <Element name='service'>
         <Service />
       </Element> */}
