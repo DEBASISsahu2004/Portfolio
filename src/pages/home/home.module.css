@@ -1,126 +1,291 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.homeContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: fit-content;
-  overflow: hidden;
-  font-size: 4px;
-  gap: 4em;
-}
-
-.homeContainer .nameSection {
-  position: relative;
-}
-
-.homeContainer .nameSection h1 {
-  font-family: "Clash Display", sans-serif;
-  font-size: clamp(10em, 22vw, 180em);
-  line-height: 0.7;
-  font-weight: 900;
-}
-
-.homeContainer .nameSection p {
-  font-size: clamp(1em, 6vw, 70em);
-  position: absolute;
-  font-family: "Pretty Dahlia", sans-serif;
-  bottom: 0;
-  left: 0.7em;
-  color: var(--secondary-color);
-}
-
-.homeContainer .textSection {
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
-.homeContainer .textSection h1 {
-  font-size: clamp(4.5em, 3.5vw, 12em);
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(90deg, #e1ffda 0%, #0d92d4 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.homeContainer .textSection p {
-  font-size: clamp(2em, 2vw, 4.5em);
-  margin: 0 auto;
-  width: 80%;
-  font-family: "Nunito Sans", sans-serif;
-}
-
 @keyframes backgroundFlow {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-.homeContainer .textSection .linkToExperience {
-  background: linear-gradient(90deg, #d4500d 0%, #e1ffda 50%, #d4500d 100%);
-  background-size: 200% 200%;
+@keyframes rotateGradient {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
+
+.homeContainer {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.homeContainer .nameSection {
+  position: relative;
+  font-size: 4px;
+}
+
+.homeContainer .nameSection h1 {
+  font-family: "Clash Display", sans-serif;
+  font-size: clamp(50px, 21.8vw, 180em);
+  line-height: 0.7;
+}
+
+.homeContainer .nameSection p {
+  font-size: clamp(5em, 6vw, 23em);
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  font-family: "Pretty Dahlia", sans-serif;
+  color: var(--secondary-color);
+}
+
+.homeContainer .textSection {
+  text-align: center;
+  display: grid;
+  gap: 10px;
+}
+
+.homeContainer .textSection h1 {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--tertiary-color),
+    var(--primary-color)
+  );
   background-clip: text;
+  font-weight: 800;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: clamp(2em, 2vw, 4.5em);
-  font-weight: 800;
-  padding: 0.5em 2em;
+  background-size: 200% 200%;
+  animation: backgroundFlow 4s infinite;
+}
+
+.homeContainer .textSection p {
+  font-size: 18px;
   margin: 0 auto;
-  cursor: pointer;
-  border: 2px solid #666;
-  border-radius: 0.3em;
-  transition: all 0.3s ease-in-out;
+  width: 80%;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-.homeContainer .textSection .linkToExperience:hover {
-  animation: backgroundFlow 2s infinite;
-  transform: scale(1.05);
-}
-
-.homeContainer .textSection .linkToExperience:active {
-  transform: scale(0.95);
-}
-
-.homeContainer .imageSection {
+.homeContainer .textSection .linkToExperience {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: end;
-  gap: 3vw;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 24px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  background-color: black;
 }
 
-.homeContainer .imageSection .content {
-  position: relative;
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
-.homeContainer .imageSection img {
-  width: clamp(54em, 28vw, 200em);
-  object-fit: cover;
-  border: 4px solid white;
-  position: relative;
-  z-index: 1;
-}
-
-.homeContainer .imageSection .content:before {
-  content: "";
+.homeContainer .textSection .linkToExperience::after {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(255, 255, 255, 0) 0%,#000000c3 70%, #000000 100%);
-  z-index: 2;
+  border-radius: 8px;
+  content: "";
+  width: 102%;
+  height: 110%;
+  background-image: conic-gradient(
+    from var(--angle),
+    var(--tertiary-color),
+    var(--primary-color),
+    var(--tertiary-color),
+    var(--primary-color),
+    var(--tertiary-color)
+  );
+  z-index: -1;
+}
+
+.homeContainer .textSection .linkToExperience:hover::after {
+  animation: 3s rotateGradient linear infinite;
+}
+
+.homeContainer .textSection .linkToExperience img {
+  width: 24px;
+  aspect-ratio: 1/1;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.homeContainer .textSection .linkToExperience:hover img {
+  transform: rotate(0);
+}
+
+.homeContainer .serviceSection .imageContainer,
+.homeContainer .contactSection .imageContainer {
+  width: fit-content;
+  border-radius: 200px;
+  background: linear-gradient(132deg, #202020 16%, #0b0b0b 73%);
+  padding: 20px;
+}
+
+.homeContainer .serviceSection .imageContainer img,
+.homeContainer .contactSection .imageContainer img {
+  width: 24px;
+  aspect-ratio: 1/1;
+}
+
+.homeContainer .serviceSection .text,
+.homeContainer .contactSection .text {
+  font-size: 18px;
+  color: #666;
+  width: 360px;
+}
+
+.homeContainer .serviceSection,
+.homeContainer .contactSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 20px;
+}
+
+.homeContainer .serviceSection {
+  left: 4vw;
+}
+
+.homeContainer .contactSection {
+  margin-left: auto;
+  margin-right: 4vw;
+  text-align: end;
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    gap: 40px;
+  }
+
+  .homeContainer .textSection {
+    gap: 10px;
+  }
+
+  .homeContainer .textSection h1 {
+    font-size: 20px;
+  }
+
+  .homeContainer .textSection p {
+    font-size: 14px;
+  }
+
+  .homeContainer .textSection .linkToExperience {
+    gap: 10px;
+    margin: 24px auto;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .homeContainer .textSection .linkToExperience img {
+    width: 20px;
+  }
+
+  .homeContainer .serviceSection .imageContainer,
+  .homeContainer .contactSection .imageContainer {
+    padding: 16px;
+  }
+
+  .homeContainer .serviceSection .imageContainer img,
+  .homeContainer .contactSection .imageContainer img {
+    width: 18px;
+  }
+
+  .homeContainer .serviceSection .text,
+  .homeContainer .contactSection .text {
+    font-size: 14px;
+    width: 260px;
+  }
+
+  .homeContainer .serviceSection,
+  .homeContainer .contactSection {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 426px) {
+  .homeContainer {
+    gap: 30px;
+  }
+
+  .homeContainer .textSection {
+    gap: 8px;
+  }
+
+  .homeContainer .textSection h1 {
+    font-size: 16px;
+  }
+
+  .homeContainer .textSection p {
+    font-size: 12px;
+  }
+
+  .homeContainer .textSection .linkToExperience {
+    gap: 8px;
+    margin: 12px auto;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .homeContainer .textSection .linkToExperience img {
+    width: 18px;
+  }
+
+  .homeContainer .serviceSection .imageContainer,
+  .homeContainer .contactSection .imageContainer {
+    padding: 12px;
+  }
+
+  .homeContainer .serviceSection .imageContainer img,
+  .homeContainer .contactSection .imageContainer img {
+    width: 14px;
+  }
+
+  .homeContainer .serviceSection .text,
+  .homeContainer .contactSection .text {
+    font-size: 12px;
+    width: 260px;
+  }
+
+  .homeContainer .serviceSection,
+  .homeContainer .contactSection {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 321px) {
+  .homeContainer .textSection p {
+    width: 90%;
+  }
+
+  .homeContainer .textSection .linkToExperience {
+    padding: 6px 10px;
+  }
+
+  .homeContainer .serviceSection .text,
+  .homeContainer .contactSection .text {
+    width: 240px;
+  }
 }

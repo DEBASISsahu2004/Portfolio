@@ -1,20 +1,19 @@
-:root{
-  --primary-color: #0D92D4;
-  --secondary-color: #D4500D;
-  --tertiary-color: #E1FFDA;
+:root {
+  --primary-color: #0d92d4;
+  --secondary-color: #d4500d;
+  --tertiary-color: #e1ffda;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
 }
 
 body {
+  width: 100dvw;
+  height: 100dvh;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: scroll;
   background-color: black;
   color: white;
 }
