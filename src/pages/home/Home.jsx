@@ -9,7 +9,7 @@ const Home = () => {
         <div className={styles.homeContainer}>
             <div className={styles.nameSection}>
                 <h1>DEBASIS</h1>
-                <p>Debasis</p>
+                <p>Debasis Sahu</p>
             </div>
 
             <div className={styles.textSection}>
