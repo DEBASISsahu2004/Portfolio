@@ -14,7 +14,7 @@ const Footer = () => {
                     {['Home', 'About', 'Experience'].map((text, index) => (
                         <Link className={styles.sectionLink} key={index} to={text.toLowerCase()} smooth duration={500}>{text}</Link>
                     ))}
-                    <a href='https://drive.google.com/drive/folders/1lK_kuNvZnCN7oxMOhL89RTwVU-oq4GXi?usp=drive_link' className={styles.sectionLink}>Video CV</a>
+                    <a href='https://drive.google.com/drive/folders/1lK_kuNvZnCN7oxMOhL89RTwVU-oq4GXi?usp=drive_link' target='_blank' className={styles.sectionLink}>Video CV</a>
                 </div>
 
                 <div className={styles.socialHandles}>
